@@ -145,7 +145,7 @@ Create a `.eslintrc.json` file in the project root and enter the below contents:
     "ecmaVersion": 12
   },
   "env": {
-    "commonjs": true,
+    "commonjs": false,
     "node": true
   },
   "rules": {
@@ -159,10 +159,17 @@ Create a `.eslintrc.json` file in the project root and enter the below contents:
         "singleQuote": true,
         "printWidth": 100,
         "tabWidth": 4,
-        "semi": true
+        "semi": true,
+        "parser": "flow"
+      },
+      {
+        "fileInfoOptions": {
+          "withNodeModules": true
+        }
       }
     ]
   },
   "plugins": ["prettier"]
 }
+
 ```
